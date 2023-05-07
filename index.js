@@ -6,10 +6,12 @@ const path = require('path');
 
 const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(express.static('public'));
+//app.use(express.static('public'));
 
 app.get('/', (req, res) => {
-  res.sendFile(__dirname + '/html/index.html');
+  res.sendFile(__dirname + '/public/login.html');
+  console.log("root")
+  //res.sendFile('/public/login.html')
 });
 
 app.post('/create-pdf', async (req, res) => {
@@ -44,3 +46,6 @@ app.post('/create-pdf', async (req, res) => {
 app.listen(3000, () => {
   console.log('Server listening on port 3000');
 });
+
+
+app.use(express.static('public'));
