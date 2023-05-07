@@ -1,0 +1,49 @@
+header {
+	background-color: dimgray;
+	color: #fff;
+	padding: 20px;
+}
+
+header h1 {
+	margin: 0;
+}
+
+nav ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+nav ul li {
+	display: inline-block;
+	margin-right: 20px;
+}
+
+nav ul li:last-child {
+	margin-right: 0;
+}
+
+nav ul li a {
+	color: #fff;
+	text-decoration: none;
+}
+
+.hero-image {
+	/* background-image: url("../img/bild2.jpg"); */
+    background-color: darkslategrey;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 500px;
+	position: relative;
+}
+
+
+body {
+    background-image: url("logo_transparent");
+    background-repeat: no-repeat;
+    /*margin-left: -900;*/
+    margin-right: auto;
+    justify-content: center;
+    align-items: center;
+  }
+  
