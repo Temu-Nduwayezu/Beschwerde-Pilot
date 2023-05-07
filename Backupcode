@@ -5,7 +5,7 @@ pp.post('/auth', function (request, response) {
         if(username ==="Test") {
             request.session.loggedin = true;
             request.session.username = username;
-            console.log('TEst')
+            console.log('Test')
             response.redirect('/home');
         }
         else{
