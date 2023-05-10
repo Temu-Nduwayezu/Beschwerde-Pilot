@@ -7,6 +7,10 @@
     <link rel="stylesheet" type="text/css" href="BPCore.css">
     <link rel="stylesheet" type="text/css" href="nav.css">
     <link rel="stylesheet" type="text/css" href="screen.css">
+    <style>
+		@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+		
+	  </style>
 
     <title>Beschwerde Core</title>
 </head>
@@ -23,17 +27,16 @@
         <div class="openMenu"><i class="fa fa-bars"></i></div>
         <ul class="mainMenu">
             <li><a class="current" href="index.html">Home</a></li>
-            <li><a href="aboutus.html">About Us</a></li>
             <li><a href="impressum.html">Impressum</a></li>
             <li><a href="abonnentment.html">Abonnentment</a></li>
             <div class="closeMenu"><i class="fa fa-times"></i></div>
 
         </ul>
     </nav>
-
+<style>main{margin-top: 30px; font-size: large; line-height: 1.5;}</style>
     <main>
         <form action="/create-pdf" method="post">
-
+            <center>
             <label for="behoerde">An die belangte Behörde:</label>
             <input type="text" id="behoerde" name="behoerde" required><br><br>
 
@@ -57,6 +60,7 @@
 
         
             <button type="submit">Generate PDF</button>
+        </center>
           </form>
           
     </main>

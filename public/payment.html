@@ -4,10 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="aboutus.css">
-    <link rel="stylesheet" type="text/css" href="nav.css">
-    <link rel="stylesheet" type="text/css" href="screen.css">
+    <link rel="stylesheet" type="text/css" href="index.css">
+	<link rel="stylesheet" type="text/css" href="nav.css">
+	<link rel="stylesheet" type="text/css" href="screen.css">
 
+
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+		
+	  </style>
 	<title>Beschwerde Pilot</title>
 </head>
 <body>
@@ -26,12 +31,26 @@
             <li><a class="current" href="index.html">Home</a></li>
             <li><a href="BPCore.html">Beschwerde schreiben</a></li>
             <li><a href="impressum.html">Impressum</a></li>
-            <li><a href="abonnentment.html">Abonnentment</a></li>
+			<li><a href="abonnentment.html">Abonnentment</a></li>
             <div class="closeMenu"><i class="fa fa-times"></i></div>
 
         </ul>
     </nav>
-    <footer>
-		<center><p>&copy; 2023 Beschwerde Pilot Team </p></center>
-	</footer>
-</body>
+    
+    <head>
+    <script src="https://js.stripe.com/v3/"></script>
+  </head>
+
+  <form id="payment-form">
+    <div class="form-group">
+      <label for="amount">Amount</label>
+      <input type="text" id="amount" class="form-control" required>
+    </div>
+    <div class="form-group">
+      <label for="card-element">Credit or debit card</label>
+      <div id="card-element"></div>
+      <div id="card-errors" role="alert"></div>
+    </div>
+    <button type="submit" class="btn btn-primary">Pay</button>
+  </form>
+  

@@ -110,6 +110,7 @@ nav ul li a {
 */
 body {
 	font-family: 'Lora', serif;
+	font-size:large;
 	background-color:rgb(255, 255, 255);
 }
 header {
