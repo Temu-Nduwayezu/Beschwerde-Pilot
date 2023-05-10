@@ -1,0 +1,55 @@
+/*header {
+	background-color: dimgray;
+	color: #fff;
+	padding: 20px;
+}
+
+header h1 {
+	margin: 0;
+}
+
+nav ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+nav ul li {
+	display: inline-block;
+	margin-right: 20px;
+}
+
+nav ul li:last-child {
+	margin-right: 0;
+}
+
+nav ul li a {
+	color: #fff;
+	text-decoration: none;
+}
+
+.hero-image {
+	/* background-image: url("../img/bild2.jpg"); 
+    background-color: darkslategrey;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 500px;
+	position: relative;
+}
+
+.main {
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 6000px;
+}
+*/
+body {
+	font-family: 'Lora', serif;
+	background-color:rgb(255, 255, 255);
+}
+header {
+	background-color:rgb(189, 222, 236);
+	color: #000000;
+	padding: 20px;
+
+}

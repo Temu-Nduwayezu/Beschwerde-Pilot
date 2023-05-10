@@ -1,4 +1,4 @@
-body {
+/*body {
 	font-family: Arial, sans-serif;
 	margin: 0;
 	padding: 0;
@@ -35,7 +35,7 @@ nav ul li a {
 }
 
 .hero-image {
-	/* background-image: url("../img/bild2.jpg"); */
+	/* background-image: url("../img/bild2.jpg");
     background-color: darkslategrey;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -107,3 +107,15 @@ nav ul li a {
 .footer p {
 	margin: 0;
 }
+*/
+body {
+	font-family: 'Lora', serif;
+	background-color:rgb(255, 255, 255);
+}
+header {
+	background-color:rgb(189, 222, 236);
+	color: #000000;
+	padding: 20px;
+
+}
+
