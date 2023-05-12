@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const PDFDocument = require('pdf-lib').PDFDocument;
+//const PDFDocument = require('pdf-lib').PDFDocument;
+const { PDFDocument, StandardFonts } = require('pdf-lib');
 const fs = require('fs');
 const path = require('path');
 const cron = require('node-cron');
@@ -32,9 +33,11 @@ app.post('/create-pdf', async (req, res) => {
   const email = req.body.email;
   const saumnisbehorde = req.body.saumnisbehorde;
 
-
+  
+  
   // Create a new PDF document
   const pdfDoc = await PDFDocument.create();
+  const boldFont = await pdfDoc.embedFont(StandardFonts.HelveticaBold);
   const paragraph = `Gegen die mehr als 6-monatige Untätigkeit ${behoerde} bei der Erledigung \n eines Antrages auf (Antragsgegenstand) vom ${datum}, erhebe ich wegen \n Verletzung in meinem Recht auf Entscheidung`
   const beschwerde = `Beschwerde \n und stelle den/stelle durch meine bevollmächtigte Vertreterin den`
   const antrag = `das Verwaltungsgericht möge über meinen Antrag auf Erteilung der Bewilligung zur (Antragsgegenstand)\n selbst in der Sache erkennen und mir die Bewilligung zur (Antragsgegenstand) erteilen,\n [in eventu] gem §24 VwGVG eine öffentliche Verhandlung durchführen.`
@@ -45,36 +48,35 @@ app.post('/create-pdf', async (req, res) => {
   // Draw the text on the page
   const {width,height} = page.getSize();
   page.drawText(`Behörde: ${behoerde}`, {
+    size:16,
     x: 50,
     y: height - 70
   });
   page.drawText(`Adresse: ${adresse}`, {
+    size:16,
     x: 50,
     y: height - 90
   });
-  page.drawText(`Ort: ${ort}`, {
-    x: 50,
+  page.drawText(`${ort},${datum}`, {
+    size:16,
+    x: 450,
     y: height - 110
   });
-  page.drawText(`Datum: ${datum}`, {
-    x: 50,
-    y: height - 130
-  });
-  page.drawText(`Name: ${name}`, {
+  page.drawText(`Beschwerdeführer: ${name}`, {
+    size:16,
     x: 50,
     y: height - 150
   });
   page.drawText(`Adresse: ${adresse}`, {
+    size:16,
     x: 50,
     y: height - 170
   });
-  page.drawText(`Email: ${email}`, {
-    x: 50,
-    y: height - 190
-  });
   page.drawText(`Säumnisbeschwerde:`, {
-    x: 50,
-    y: height - 210
+    size:16,
+    x: 220,
+    y: height - 210,
+    font: boldFont
   });
   page.drawText(paragraph, {
     x: 50,

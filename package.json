@@ -18,8 +18,10 @@
   },
   "homepage": "https://github.com/Temu-Nduwayezu/Beschwerde-Pilot#readme",
   "dependencies": {
+    "bootstrap": "^5.2.3",
     "express": "^4.18.2",
     "node-cron": "^3.0.2",
+    "nodemon": "^2.0.22",
     "pdf-lib": "^1.17.1",
     "sqlite3": "^5.1.6"
   }
