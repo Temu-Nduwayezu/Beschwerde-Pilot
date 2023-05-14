@@ -79,14 +79,47 @@
           </form> -->
         <div class="container w-50">
             <form action="/create-pdf" method="post">
+
                 <div class="mb-3">
                     <label for="behoerde" class="form-label">An die belangte Behörde:</label>
                     <input type="text" class="form-control" id="behoerde" name="behoerde" required>
                 </div>
+
+                <div class="mb-3">
+                    <label for="adresse" class="form-label">Adresse:</label>
+                    <input type="text" class="form-control" id="adresse" name="adresse" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="Ort" class="form-label">Ort:</label>
+                    <input type="text" class="form-control" id="ort" name="ort" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="Datum" class="form-label">Datum:</label>
+                    <input type="date" class="form-control" id="datum" name="datum" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="name" class="form-label">Beschwerdeführer:</label>
+                    <input type="text" class="form-control" id="name" name="name" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="adresse1" class="form-label">Adresse:</label>
+                    <input type="text" class="form-control" id="adresse1" name="adresse1" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="grund" class="form-label">Antragsgegenstand:</label>
+                    <input type="text" class="form-control" id="grund" name="grund" required>
+                </div>
+
                 <div class="mb-3 form-check">
                     <input type="checkbox" class="form-check-input" id="exampleCheck1">
                     <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                  </div>                
+                </div>
+
                 <button type="submit" class="btn btn-primary" id="submitButton" disabled>Submit</button>
             </form>
         </div>
@@ -100,15 +133,15 @@
     <script>
         const submitButton = document.getElementById("submitButton");
         const checkbox = document.getElementById("exampleCheck1");
-        
-        checkbox.addEventListener("change", function() {
-          if (checkbox.checked) {
-            submitButton.disabled = false;
-          } else {
-            submitButton.disabled = true;
-          }
+
+        checkbox.addEventListener("change", function () {
+            if (checkbox.checked) {
+                submitButton.disabled = false;
+            } else {
+                submitButton.disabled = true;
+            }
         });
-      </script>
+    </script>
 </body>
 
 </html>
